@@ -18,11 +18,3 @@ require_relative 'codebreaker/game'
 module Codebreaker
 end
 
-b = Codebreaker::Game.new('sss')
-a = '1524'
-p b.input_code(a)
-# p b.use_hint
-# p b.use_hint
-# p b.use_hint
-
-#p b.lose?
