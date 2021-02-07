@@ -11,5 +11,5 @@
 /pkg/
 /spec/reports/
 /tmp/
-/.idea/*
+.idea/
 .rspec_status
