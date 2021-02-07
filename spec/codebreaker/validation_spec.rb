@@ -33,12 +33,7 @@ module Codebreaker
     end
 
     describe 'When player type input code' do
-      let(:negative_nubmer) { '321' }
       let(:incorrect_number) { '9876' }
-
-      it 'should is number length is incorrect ' do
-        expect { validation.code_length(negative_nubmer) }.to raise_error(CodeLengthError)
-      end
 
       it "should is number incorrect between #{CODE_MIN} and #{CODE_MAX} " do
         expect { validation.code_is_valid?(incorrect_number) }.to raise_error(CodeValidError)
