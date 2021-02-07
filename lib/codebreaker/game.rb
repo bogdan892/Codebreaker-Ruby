@@ -62,7 +62,7 @@ module Codebreaker
       @input_code.map.with_index do |_a, i|
         if @input_code[i] == @code[i]
           @code[i], @input_code[i] = ''
-          '+'
+          COMPARE_EQUAL
         end
       end
     end
@@ -72,7 +72,7 @@ module Codebreaker
         if @code.include? @input_code[i]
           index_input = @input_code[i]
           @code[@code.index(index_input)] = '-'
-          '-'
+          COMPARE_FIND
         end
       end
     end
