@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.summary       = 'Write a short summary, because RubyGems requires one.'
   spec.description   = 'CodeBreaker is a logic game'
   spec.homepage      = 'https://github.com/bogdan892/'
-  spec.required_ruby_version = Gem::Requirement.new('>= 2.7.2')
+  spec.required_ruby_version = Gem::Requirement.new('>= 2.4.0')
 
   spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
 
