@@ -15,7 +15,3 @@ require_relative 'codebreaker/game'
 
 module Codebreaker
 end
-a = Codebreaker::Game.new('sdsdsd', 'easy')
-p a.input_code('1234')
-@attempts = 0
-p @attempts.positive?

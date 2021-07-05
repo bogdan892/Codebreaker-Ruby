@@ -64,18 +64,18 @@ module Codebreaker
     private
 
     def start_math
-      @input_code.map.with_index do |_a, i|
-        if @input_code[i] == @code[i]
-          @code[i], @input_code[i] = ''
+      @input_code.map.with_index do |char, index|
+        if @input_code[index] == @code[index]
+          @code[index], @input_code[index] = ''
           COMPARE_EQUAL
         end
       end
     end
 
     def end_math
-      @input_code.map.with_index do |_a, i|
-        if @code.include? @input_code[i]
-          index_input = @input_code[i]
+      @input_code.map.with_index do |char, index|
+        if @code.include? @input_code[index]
+          index_input = @input_code[index]
           @code[@code.index(index_input)] = '-'
           COMPARE_FIND
         end
