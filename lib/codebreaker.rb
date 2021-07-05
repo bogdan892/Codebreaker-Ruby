@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-# Dir[ "codebreaker/modules/*.rb"].each { |file_name| require_relative file_name  }
-# Dir[ "codebreaker/errors/*.rb"].each { |file_name| require_relative file_name }
 require_relative 'codebreaker/config/constants'
 require_relative 'codebreaker/errors/code_length_error'
 require_relative 'codebreaker/errors/code_valid_error'
@@ -17,4 +15,7 @@ require_relative 'codebreaker/game'
 
 module Codebreaker
 end
-
+a = Codebreaker::Game.new('sdsdsd', 'easy')
+p a.input_code('1234')
+@attempts = 0
+p @attempts.positive?

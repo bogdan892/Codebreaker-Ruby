@@ -22,12 +22,17 @@ module Codebreaker
       @attempts -= 1 if @attempts.positive?
       check_code(input_code)
       @input_code = input_code.chars
+      @code_comprasions = @input_code.clone
       @code = @secret_code.clone
       start_math.join + end_math.join
     end
 
     def generate_code
       Array.new(CODE_SIZE) { rand(CODE_MIN..CODE_MAX).to_s }
+    end
+
+    def secrete_code
+      @secret_code.join
     end
 
     def use_hint
@@ -38,7 +43,7 @@ module Codebreaker
     end
 
     def won?
-      @secret_code == @input_code
+      @secret_code == @code_comprasions
     end
 
     def lose?
@@ -47,12 +52,12 @@ module Codebreaker
 
     def to_h
       {
-        name: @user,
-        difficulty: @difficulty,
-        attempts_total: @attempts,
-        attempts_used: (@attempts - DIFFICULTY[@difficulty][:attempts]),
-        hints_total: @hints,
-        hints_used: (@hints - DIFFICULTY[@difficulty][:hints])
+          name: @user,
+          difficulty: @difficulty,
+          attempts_total: @attempts,
+          attempts_used: (@attempts - DIFFICULTY[@difficulty][:attempts]),
+          hints_total: @hints,
+          hints_used: (@hints - DIFFICULTY[@difficulty][:hints])
       }
     end
 

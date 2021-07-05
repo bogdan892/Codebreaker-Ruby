@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.summary       = 'Write a short summary, because RubyGems requires one.'
   spec.description   = 'CodeBreaker is a logic game'
   spec.homepage      = 'https://github.com/bogdan892/'
-  spec.required_ruby_version = Gem::Requirement.new('>= 2.4.0')
+  spec.required_ruby_version = Gem::Requirement.new('>= 2.7.2')
 
   spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
 
@@ -28,9 +28,10 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_development_dependency 'rake', '~> 13.0'
+  spec.add_development_dependency 'bundler'
+  spec.add_development_dependency 'rake'
   spec.add_development_dependency 'rspec'
-  spec.add_development_dependency 'rubocop'
-  # spec.add_development_dependency 'rubocop-rspec'
+  spec.add_development_dependency 'rubocop-performance'
+  spec.add_development_dependency 'rubocop-rake'
   spec.add_development_dependency 'simplecov'
 end

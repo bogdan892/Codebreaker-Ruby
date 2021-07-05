@@ -40,6 +40,13 @@ GEM
       unicode-display_width (>= 1.4.0, < 3.0)
     rubocop-ast (1.4.1)
       parser (>= 2.7.1.5)
+    rubocop-performance (1.9.2)
+      rubocop (>= 0.90.0, < 2.0)
+      rubocop-ast (>= 0.4.0)
+    rubocop-rake (0.5.1)
+      rubocop
+    rubocop-rspec (1.35.0)
+      rubocop (>= 0.60.0)
     ruby-progressbar (1.11.0)
     simplecov (0.21.2)
       docile (~> 1.1)
@@ -53,10 +60,13 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  bundler
   codebreaker!
-  rake (~> 13.0)
+  rake
   rspec
-  rubocop
+  rubocop-performance
+  rubocop-rake
+  rubocop-rspec
   simplecov
 
 BUNDLED WITH
