@@ -56,7 +56,7 @@ module Codebreaker
           difficulty: @difficulty,
           attempts_total: DIFFICULTY[@difficulty][:attempts],
           attempts_used: (DIFFICULTY[@difficulty][:attempts] - @attempts),
-          hints_total: @hints,
+          hints_total: DIFFICULTY[@difficulty][:hints],
           hints_used: (DIFFICULTY[@difficulty][:hints] - @hints)
       }
     end
