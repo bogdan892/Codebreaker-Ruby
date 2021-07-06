@@ -52,19 +52,19 @@ module Codebreaker
 
     def to_h
       {
-          name: @user,
-          difficulty: @difficulty,
-          attempts_total: DIFFICULTY[@difficulty][:attempts],
-          attempts_used: (DIFFICULTY[@difficulty][:attempts] - @attempts),
-          hints_total: DIFFICULTY[@difficulty][:hints],
-          hints_used: (DIFFICULTY[@difficulty][:hints] - @hints)
+        name: @user,
+        difficulty: @difficulty,
+        attempts_total: DIFFICULTY[@difficulty][:attempts],
+        attempts_used: (DIFFICULTY[@difficulty][:attempts] - @attempts),
+        hints_total: DIFFICULTY[@difficulty][:hints],
+        hints_used: (DIFFICULTY[@difficulty][:hints] - @hints)
       }
     end
 
     private
 
     def start_math
-      @input_code.map.with_index do |char, index|
+      @input_code.map.with_index do |_char, index|
         if @input_code[index] == @code[index]
           @code[index], @input_code[index] = ''
           COMPARE_EQUAL
@@ -73,7 +73,7 @@ module Codebreaker
     end
 
     def end_math
-      @input_code.map.with_index do |char, index|
+      @input_code.map.with_index do |_char, index|
         if @code.include? @input_code[index]
           index_input = @input_code[index]
           @code[@code.index(index_input)] = '-'
