@@ -36,7 +36,7 @@ module Codebreaker
     end
 
     def use_hint
-      return 'false' unless @hints.positive?
+      return false unless @hints.positive?
 
       @hints -= 1
       @secret_code_for_hints.pop
