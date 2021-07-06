@@ -54,10 +54,10 @@ module Codebreaker
       {
           name: @user,
           difficulty: @difficulty,
-          attempts_total: @attempts,
-          attempts_used: (@attempts - DIFFICULTY[@difficulty][:attempts]),
+          attempts_total: DIFFICULTY[@difficulty][:attempts],
+          attempts_used: (DIFFICULTY[@difficulty][:attempts] - @attempts),
           hints_total: @hints,
-          hints_used: (@hints - DIFFICULTY[@difficulty][:hints])
+          hints_used: (DIFFICULTY[@difficulty][:hints] - @hints)
       }
     end
 

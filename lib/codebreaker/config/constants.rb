@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Codebreaker
-  DIFFICULTY = { 'easy' => { attempts: 0, hints: 2 },
+  DIFFICULTY = { 'easy' => { attempts: 15, hints: 2 },
                  'medium' => { attempts: 10, hints: 1 },
                  'hard' => { attempts: 5, hints: 1 } }.freeze
   COMPARE_EQUAL = '+'.freeze
