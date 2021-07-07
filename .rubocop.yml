@@ -1,13 +1,18 @@
+# frozen_string_literal: true
+
+require:
+  - rubocop-performance
+
 AllCops:
-  TargetRubyVersion: 2.4
+  NewCops: enable
+  TargetRubyVersion: 2.7.2
 
-Style/StringLiterals:
-  Enabled: true
-  EnforcedStyle: double_quotes
+Style/Documentation:
+  Enabled: false
 
-Style/StringLiteralsInInterpolation:
-  Enabled: true
-  EnforcedStyle: double_quotes
-
-Layout/LineLength:
+Metrics/LineLength:
   Max: 120
+
+Metrics/BlockLength:
+  IgnoredMethods: ['describe', 'context']
+  Max: 30
